@@ -10,6 +10,7 @@ const argv = process.argv.slice(2);
 
 helpers(argv);
 
+/** It interprets the parameters given with the commands*/
 const command = {
   'amount': argv[0] || 1,
   'from': argv[1] || config.get('defaultFrom', 'USD'),
@@ -19,4 +20,5 @@ const command = {
       : config.get('defaultTo', ['USD', 'EUR', 'GBP'])
 };
 
+/** Launch the conversion*/
 cash(command);
