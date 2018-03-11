@@ -3,14 +3,12 @@
 const convert = require('..');
 const Big = require('big.js');
 
-test('should default to returning then default ifself', () => {
-  //convert(2, 'BTC', 'BTC');
-  throw new Error('test not yet defined... write your test here');
+test('should default to returning then default itself', () => {
+  expect(convert(2, 'BTC', 'BTC') == 2);
 });
 
 test('should return a number', () => {
-  //convert(2, 'BTC', 'BTC', 'Number');
-  throw new Error('test not yet defined... write your test here');
+  expect(isNaN(convert(2, 'BTC', 'BTC', 'Number')) === true)  ;
 });
 
 test('should return a Big number', () => {
